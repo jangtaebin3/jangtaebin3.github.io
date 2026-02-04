@@ -19,11 +19,3 @@ export const HeaderWrapper = styled.header<{ $hidden: boolean }>`
 
   transition: transform 0.5s ease;
 `
-
-export const Nav = styled.nav`
-  width: 100%;
-  padding: 0 24px;
-
-  display: flex;
-  gap: 16px;
-`
