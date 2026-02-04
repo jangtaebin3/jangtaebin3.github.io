@@ -1,4 +1,5 @@
-import { HeaderWrapper, Nav } from './style'
+import { HeaderWrapper } from './style'
+import NavBar from '@/components/NavBar'
 
 interface HeaderProps {
   isHidden: boolean
@@ -7,11 +8,7 @@ interface HeaderProps {
 const Header = ({ isHidden }: HeaderProps) => {
   return (
     <HeaderWrapper $hidden={isHidden}>
-      <Nav>
-        <span>Home</span>
-        <span>About</span>
-        <span>Projects</span>
-      </Nav>
+      <NavBar />
     </HeaderWrapper>
   )
 }
