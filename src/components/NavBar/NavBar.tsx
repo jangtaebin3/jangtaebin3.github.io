@@ -1,5 +1,13 @@
+import { NavWrapper, NavItem } from './style'
 
-
-export default function NavBar() {
-  return <h1>NavBar</h1>
+const NavBar = () => {
+  return (
+    <NavWrapper>
+      <NavItem to="/" end>Home</NavItem>
+      <NavItem to="/about">About</NavItem>
+      <NavItem to="/projects">Projects</NavItem>
+    </NavWrapper>
+  )
 }
+
+export default NavBar
