@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import GlobalStyle from '@/styles/GlobalStyle'
 import Layout from '@/layout'
 import Home from '@/pages/Home'
 import Projects from '@/pages/Projects'
@@ -9,6 +10,7 @@ function App() {
 
   return (
     <BrowserRouter>
+      <GlobalStyle />
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
