@@ -13,7 +13,12 @@ export const IconList = styled.div`
   margin-bottom: 12px;
 `
 
-export const IconLink = styled.a`
+export const IconButton = styled.button`
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+
   color: #555;
   transition: color 0.2s ease, transform 0.2s ease;
 
@@ -21,4 +26,10 @@ export const IconLink = styled.a`
     color: #000;
     transform: translateY(-2px);
   }
+`
+
+export const Copyright = styled.small`
+  color: #555;
+  font-size: 15px;
+  font-weight: 400;
 `
