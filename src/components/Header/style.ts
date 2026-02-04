@@ -6,7 +6,8 @@ export const HeaderWrapper = styled.header<{ $hidden: boolean }>`
   left: 0;
   right: 0;
 
-  height: 64px;
+  height: 40px;
+  padding: 32px 64px 24px;
   background: #fff;
   z-index: 1000;
 
@@ -16,7 +17,7 @@ export const HeaderWrapper = styled.header<{ $hidden: boolean }>`
   transform: ${({ $hidden }) =>
     $hidden ? 'translateY(-100%)' : 'translateY(0)'};
 
-  transition: transform 0.3s ease;
+  transition: transform 0.5s ease;
 `
 
 export const Nav = styled.nav`
