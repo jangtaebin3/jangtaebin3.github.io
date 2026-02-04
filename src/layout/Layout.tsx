@@ -1,3 +1,4 @@
+import { useState, useEffect, useRef } from 'react'
 import { Outlet } from 'react-router-dom'
 import styled from 'styled-components'
 import Header from '@/components/Header'
@@ -14,9 +15,30 @@ const Main = styled.main`
 `
 
 const Layout = () => {
+  const [isHidden, setIsHidden] = useState(false)
+  const lastScrollY = useRef(0)
+
+  useEffect(() => {
+  const handleScroll = () => {
+    const currentScrollY = window.scrollY
+
+    if (currentScrollY > lastScrollY.current) {
+      setIsHidden(true)
+    } else {
+      setIsHidden(false)
+    }
+
+    lastScrollY.current = currentScrollY
+  }
+
+  window.addEventListener('scroll', handleScroll)
+  return () => window.removeEventListener('scroll', handleScroll)
+}, [])
+
+
   return (
     <LayoutWrapper>
-      <Header />
+      <Header isHidden={isHidden} />
       <Main>
         <Outlet />
       </Main>
