@@ -1,15 +1,19 @@
-import styled from "styled-components"
+import { HeaderWrapper, Nav } from './style'
 
-const Header = () => {
-  const HeaderWrapper = styled.header`
-    height: auto;
-    position: sticky;
-    top: 0;
-    
-    padding: 32px 64px 24px;
-  `
+interface HeaderProps {
+  isHidden: boolean
+}
 
-  return <HeaderWrapper>Header</HeaderWrapper>
+const Header = ({ isHidden }: HeaderProps) => {
+  return (
+    <HeaderWrapper $hidden={isHidden}>
+      <Nav>
+        <span>Home</span>
+        <span>About</span>
+        <span>Projects</span>
+      </Nav>
+    </HeaderWrapper>
+  )
 }
 
 export default Header
