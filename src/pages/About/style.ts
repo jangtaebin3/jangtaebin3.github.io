@@ -90,3 +90,31 @@ export const EduTitle = styled.span`
   color: #333;
   margin-bottom: 24px;
 `;
+
+export const SkillsList = styled.ul`
+  display: grid;
+  grid-template-columns: repeat(2, minmax(425px, 1fr));
+  gap: 24px 16px;
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+
+  @media (max-width: 1136px) {
+    grid-template-columns: 1fr;
+  }
+`;
+
+export const SkillsItem = styled.li`
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+`;
+
+export const SkillName = styled.span`
+  font-weight: 700;
+`;
+
+export const SkillDetail = styled.span`
+  font-weight: 400;
+  color: #333;
+`;
