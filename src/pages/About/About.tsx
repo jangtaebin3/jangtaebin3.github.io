@@ -1,5 +1,6 @@
 import * as S from './style';
 import { motion } from 'framer-motion';
+import { titleVariants } from './AboutAnimations';
 import Intro from './Intro';
 import Experience from './Experience';
 import Education from './Education';
@@ -8,17 +9,6 @@ import Value from './Value';
 import Keywords from './Keywords';
 
 const MotionTitle = motion(S.AboutTitle);
-
-export const titleVariants = {
-  hidden: { opacity: 0, x: 20 },
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      duration: 0.6,
-    },
-  },
-}
 
 const About = () => {
   return (

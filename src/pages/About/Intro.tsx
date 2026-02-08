@@ -1,23 +1,10 @@
 import * as S from './style';
 import { motion } from 'framer-motion';
+import { container, item } from './AboutAnimations';
 
 const MotionSection = motion(S.Section)
 const MotionTitle = motion(S.SectionTitle)
 const MotionDetail = motion(S.IntroDetail)
-
-export const container = {
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.3,
-    },
-  },
-}
-
-export const item = {
-  hidden: { opacity: 0, y: 16 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-}
 
 const Intro = () => {
   return (
