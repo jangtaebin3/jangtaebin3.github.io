@@ -16,7 +16,7 @@ export const AboutTitle = styled.p`
 export const IntroBox = styled.div`
   display: flex;
   flex-direction: column;
-  margin-bottom: 108px;
+  margin-bottom: 64px;
 `;
 
 export const IntroText = styled.p`
@@ -34,3 +34,4 @@ export const IntroDetail = styled.p`
   font-weight: 500;
   margin-bottom: 12px;
 `;
+
