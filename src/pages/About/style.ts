@@ -13,18 +13,18 @@ export const AboutTitle = styled.p`
   margin-bottom: 80px;
 `;
 
-export const IntroBox = styled.div`
+export const Section = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: 64px;
 `;
 
-export const IntroText = styled.p`
+export const SectionTitle = styled.p`
   color: #000;
   font-size: 48px;
   font-style: normal;
   font-weight: 700;
-  margin-bottom: 48px;
+  margin-bottom: 24px;
 `;
 
 export const IntroDetail = styled.p`
@@ -35,3 +35,55 @@ export const IntroDetail = styled.p`
   margin-bottom: 12px;
 `;
 
+export const ExperienceList = styled.ul`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px 16px;
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+`;
+
+export const ExperienceItem = styled.li`
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+`;
+
+export const ExperiencePeriod = styled.span`
+  font-weight: 700;
+`;
+
+export const ExperienceTitle = styled.span`
+  font-weight: 500;
+  color: #333;
+`;
+
+export const ExperienceDetail = styled.span`
+  font-weight: 500;
+  color: #70716E;
+`;
+
+export const EduList = styled.ul`
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+`;
+
+export const EduItem = styled.li`
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+`;
+
+export const EduPeriod = styled.span`
+  font-weight: 700;
+`;
+
+export const EduTitle = styled.span`
+  font-weight: 600;
+  color: #333;
+`;
