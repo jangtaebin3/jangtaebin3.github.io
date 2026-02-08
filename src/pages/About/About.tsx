@@ -1,5 +1,11 @@
+import * as S from './style';
 
-
-export default function About() {
-  return <h1>About</h1>
+const About = () => {
+  return (
+    <S.AboutContainer>
+      
+    </S.AboutContainer>
+  )
 }
+
+export default About
