@@ -17,13 +17,6 @@ const Value = () => {
           문제를 정의하고 해결해 나가는 과정을 중요하게 생각합니다.
         </S.ValueContent>
       </S.Section>
-      <S.Section>
-        <S.SectionTitle>Keywords</S.SectionTitle>
-        <S.ValueContent>
-          Problem-first Thinking · Structured Communication · Frontend Development ·<br />
-          Academic Research · Project Management · Learning-oriented
-        </S.ValueContent>
-      </S.Section>
     </AnimatedSection>
   )
 }

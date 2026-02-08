@@ -5,6 +5,7 @@ import Experience from './Experience';
 import Education from './Education';
 import Skills from './Skills';
 import Value from './Value';
+import Keywords from './Keywords';
 
 const MotionTitle = motion(S.AboutTitle);
 
@@ -33,6 +34,7 @@ const About = () => {
       <Education />
       <Skills />
       <Value />
+      <Keywords />
     </S.AboutContainer>
   )
 }
