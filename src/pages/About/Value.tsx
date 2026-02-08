@@ -1,8 +1,9 @@
 import * as S from './style';
+import AnimatedSection from './AnimatedSection';
 
 const Value = () => {
   return (
-    <>
+    <AnimatedSection>
       <S.Section>
         <S.SectionTitle>What I Value</S.SectionTitle>
         <S.ValueContent>
@@ -23,7 +24,7 @@ const Value = () => {
           Academic Research · Project Management · Learning-oriented
         </S.ValueContent>
       </S.Section>
-    </>
+    </AnimatedSection>
   )
 }
 
