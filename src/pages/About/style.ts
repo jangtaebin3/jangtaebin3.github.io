@@ -111,6 +111,7 @@ export const SkillsItem = styled.li`
 `;
 
 export const SkillName = styled.span`
+  font-size: 20px;
   font-weight: 700;
 `;
 
