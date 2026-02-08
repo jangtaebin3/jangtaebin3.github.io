@@ -28,7 +28,7 @@ const About = () => {
           </S.ExperienceItem>
           <S.ExperienceItem>
             <S.ExperiencePeriod>2024.12 – 2025.11</S.ExperiencePeriod>
-            <S.ExperienceTitle>제22회 글로벌미디어학부 부학생회장</S.ExperienceTitle>
+            <S.ExperienceTitle>제22대 글로벌미디어학부 부학생회장</S.ExperienceTitle>
           </S.ExperienceItem>
         </S.ExperienceList>
       </S.Section>
@@ -36,7 +36,7 @@ const About = () => {
         <S.SectionTitle>Education</S.SectionTitle>
         <S.EduList>
           <S.EduItem>
-            <S.EduPeriod>2023.03 -</S.EduPeriod>
+            <S.EduPeriod>2024.03 -</S.EduPeriod>
             <S.EduTitle>숭실대학교 글로벌미디어학부</S.EduTitle>
           </S.EduItem>
           <S.EduItem>
