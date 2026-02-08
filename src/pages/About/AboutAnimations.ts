@@ -1,10 +1,10 @@
 export const titleVariants = {
-  hidden: { opacity: 0, x: 20 },
+  hidden: { opacity: 0, x: 30 },
   visible: {
     opacity: 1,
     x: 0,
     transition: {
-      duration: 0.6,
+      duration: 0.5,
     },
   },
 }
@@ -30,12 +30,12 @@ export const item = {
 }
 
 export const sectionVariants = {
-  hidden: { opacity: 0, x: 64 },
+  hidden: { opacity: 0, x: 100 },
   visible: {
     opacity: 1,
     x: 0,
     transition: {
-      duration: 0.9,
+      duration: 0.7,
     },
   },
 }
