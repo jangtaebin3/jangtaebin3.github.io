@@ -43,7 +43,12 @@ const About = () => {
             <S.EduPeriod>2024</S.EduPeriod>
             <S.EduTitle>대광고등학교 졸업</S.EduTitle>
           </S.EduItem>
+          <S.EduItem/>
+          <S.EduItem/>
         </S.EduList>
+      </S.Section>
+      <S.Section>
+        <S.SectionTitle>Skills</S.SectionTitle>
       </S.Section>
     </S.AboutContainer>
   )

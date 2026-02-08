@@ -65,9 +65,11 @@ export const ExperienceDetail = styled.span`
 `;
 
 export const EduList = styled.ul`
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 0 16px;
+  grid-auto-flow: row dense;
+  align-items: start;
   margin: 0;
   padding-left: 0;
   list-style: none;
@@ -86,4 +88,5 @@ export const EduPeriod = styled.span`
 export const EduTitle = styled.span`
   font-weight: 600;
   color: #333;
+  margin-bottom: 24px;
 `;
