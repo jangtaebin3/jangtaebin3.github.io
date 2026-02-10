@@ -8,7 +8,6 @@ export const titleVariants = {
     clipPath: 'inset(0% 0% 0% 0%)',
     transition: {
       duration: 0.7,
-      ease: 'easeOut',
     },
   },
 }
