@@ -12,7 +12,7 @@ const IntroHero = () => {
         variants={titleVariants}
         initial="hidden"
         animate="visible">
-          About me
+          ABOUT ME
       </MotionTitle>
       <Intro />
     </S.IntroHeroContainer>
