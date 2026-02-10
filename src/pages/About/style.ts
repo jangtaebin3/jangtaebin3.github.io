@@ -1,16 +1,40 @@
 import styled from 'styled-components';
 
 export const AboutContainer = styled.div`
-  padding: 64px 120px;
   background-color: #F8FBF4;
 `;
 
+export const IntroHeroContainer = styled.div`
+  padding: 64px 120px 0;
+  height: calc(100vh - 128px);
+  background: linear-gradient(180deg, #fff 0%, #aaa 75%, #555 100%);
+`;
+
+export const AboutContentContainer = styled.div`
+  padding: 64px 120px;
+`;
+
 export const AboutTitle = styled.p`
-  color: #000;  
-  font-size: 64px;
-  font-style: normal;
-  font-weight: 700;
-  margin-bottom: 80px;
+  position: absolute;
+  inset: 0 0 45% 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: 'Anton', Impact, sans-serif;
+  font-size: clamp(120px, 20vw, 320px);
+  font-weight: 800;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.35),
+    rgba(0,0,0,0.05)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
 `;
 
 export const Section = styled.div`
@@ -24,11 +48,11 @@ export const SectionTitle = styled.p`
   font-size: 48px;
   font-style: normal;
   font-weight: 700;
-  margin-bottom: 24px;
+  margin-bottom: 36px;
 `;
 
 export const IntroDetail = styled.p`
-  color: #70716E;
+  color: #3a3a3a;
   font-size: 36px;
   font-style: normal;
   font-weight: 500;

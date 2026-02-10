@@ -1,6 +1,6 @@
-import * as S from './style';
+import * as S from '../style';
 import { motion } from 'framer-motion';
-import { container, item } from './AboutAnimations';
+import { container, item } from '../AboutAnimations';
 
 const MotionSection = motion(S.Section)
 const MotionTitle = motion(S.SectionTitle)
@@ -14,7 +14,7 @@ const Intro = () => {
       whileInView="visible"
       viewport={{ once: true }}
     >
-      <MotionTitle variants={item}>
+      <MotionTitle variants={item} style={{ marginTop: 250 }}>
         안녕하세요, 개발자 장태빈입니다.
       </MotionTitle>
 

@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
-export const HEADER_HEIGHT = 96
+export const HEADER_HEIGHT = 64
 
 const LayoutWrapper = styled.div`
   min-height: 100vh;
@@ -18,26 +18,40 @@ const Main = styled.main`
 `
 
 const Layout = () => {
-  const [isHidden, setIsHidden] = useState(false)
+  const [isHidden, setIsHidden] = useState(() => {
+    const saved = localStorage.getItem('header-hidden')
+    return saved === 'true'
+  })
+
   const lastScrollY = useRef(0)
+  const hasScrolled = useRef(false)
 
   useEffect(() => {
-  const handleScroll = () => {
-    const currentScrollY = window.scrollY
+    lastScrollY.current = window.scrollY
 
-    if (currentScrollY > lastScrollY.current) {
-      setIsHidden(true)
-    } else {
-      setIsHidden(false)
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY
+
+      if (!hasScrolled.current) {
+        hasScrolled.current = true
+        lastScrollY.current = currentScrollY
+        return
+      }
+
+      if (currentScrollY > lastScrollY.current) {
+        setIsHidden(true)
+        localStorage.setItem('header-hidden', 'true')
+      } else if (currentScrollY < lastScrollY.current) {
+        setIsHidden(false)
+        localStorage.setItem('header-hidden', 'false')
+      }
+
+      lastScrollY.current = currentScrollY
     }
 
-    lastScrollY.current = currentScrollY
-  }
-
-  window.addEventListener('scroll', handleScroll)
-  return () => window.removeEventListener('scroll', handleScroll)
-}, [])
-
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   return (
     <LayoutWrapper>
