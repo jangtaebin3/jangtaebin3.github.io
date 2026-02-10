@@ -1,8 +1,16 @@
 import styled from 'styled-components';
 
 export const AboutContainer = styled.div`
-  padding: 64px 120px;
   background-color: #F8FBF4;
+`;
+
+export const IntroHeroContainer = styled.div`
+  padding: 64px 120px 0;
+  height: 100vh;
+`;
+
+export const AboutContentContainer = styled.div`
+  padding: 0 120px 64px;
 `;
 
 export const AboutTitle = styled.p`
