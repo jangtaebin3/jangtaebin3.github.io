@@ -1,10 +1,14 @@
 export const titleVariants = {
-  hidden: { opacity: 0, x: 30 },
+    hidden: {
+    opacity: 1,
+    clipPath: 'inset(0% 0% 100% 0%)',
+  },
   visible: {
     opacity: 1,
-    x: 0,
+    clipPath: 'inset(0% 0% 0% 0%)',
     transition: {
-      duration: 0.5,
+      duration: 0.7,
+      ease: 'easeOut',
     },
   },
 }
