@@ -7,7 +7,7 @@ const MotionTitle = motion(S.AboutTitle);
 
 const IntroHero = () => {
   return (
-    <div>
+    <S.IntroHeroContainer>
       <MotionTitle
         variants={titleVariants}
         initial="hidden"
@@ -15,7 +15,7 @@ const IntroHero = () => {
           About me
       </MotionTitle>
       <Intro />
-    </div>
+    </S.IntroHeroContainer>
   )
 }
 
