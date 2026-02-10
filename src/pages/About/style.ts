@@ -6,7 +6,8 @@ export const AboutContainer = styled.div`
 
 export const IntroHeroContainer = styled.div`
   padding: 64px 120px 0;
-  height: 100vh;
+  height: calc(100vh - 128px);
+  background: linear-gradient(180deg, #fff 0%, #999 70%, #333 100%);
 `;
 
 export const AboutContentContainer = styled.div`
@@ -32,11 +33,11 @@ export const SectionTitle = styled.p`
   font-size: 48px;
   font-style: normal;
   font-weight: 700;
-  margin-bottom: 24px;
+  margin-bottom: 48px;
 `;
 
 export const IntroDetail = styled.p`
-  color: #70716E;
+  color: #636361;
   font-size: 36px;
   font-style: normal;
   font-weight: 500;
