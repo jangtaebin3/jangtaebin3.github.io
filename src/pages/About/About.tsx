@@ -1,13 +1,13 @@
-import * as S from './style';
+import { AboutContainer } from './style';
 import IntroHero from './IntroHero';
 import AboutContent from './AboutContent';
 
 const About = () => {
   return (
-    <S.AboutContainer>
+    <AboutContainer>
       <IntroHero />
       <AboutContent />
-    </S.AboutContainer>
+    </AboutContainer>
   )
 }
 

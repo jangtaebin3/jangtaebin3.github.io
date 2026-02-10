@@ -1,4 +1,4 @@
-import * as S from '../style';
+import { AboutContentContainer } from '../style';
 import Experience from './Experience';
 import Education from './Education';
 import Skills from './Skills';
@@ -7,13 +7,13 @@ import Keywords from './Keywords';
 
 const AboutContent = () => {
   return (
-    <div>
+    <AboutContentContainer>
       <Experience />
       <Education />
       <Skills />
       <Value />
       <Keywords />
-    </div>
+    </AboutContentContainer>
   )
 }
 
