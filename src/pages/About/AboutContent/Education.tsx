@@ -1,5 +1,5 @@
-import * as S from './style';
-import AnimatedSection from './AnimatedSection';
+import * as S from '../style';
+import AnimatedSection from '../AnimatedSection';
 
 const Education = () => {
   return (

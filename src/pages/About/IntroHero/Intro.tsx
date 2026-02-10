@@ -1,6 +1,6 @@
-import * as S from './style';
+import * as S from '../style';
 import { motion } from 'framer-motion';
-import { container, item } from './AboutAnimations';
+import { container, item } from '../AboutAnimations';
 
 const MotionSection = motion(S.Section)
 const MotionTitle = motion(S.SectionTitle)

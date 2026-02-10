@@ -1,12 +1,12 @@
 import * as S from './style';
 import { motion } from 'framer-motion';
 import { titleVariants } from './AboutAnimations';
-import Intro from './Intro';
-import Experience from './Experience';
-import Education from './Education';
-import Skills from './Skills';
-import Value from './Value';
-import Keywords from './Keywords';
+import Intro from './IntroHero/Intro';
+import Experience from './AboutContent/Experience';
+import Education from './AboutContent/Education';
+import Skills from './AboutContent/Skills';
+import Value from './AboutContent/Value';
+import Keywords from './AboutContent/Keywords';
 
 const MotionTitle = motion(S.AboutTitle);
 
