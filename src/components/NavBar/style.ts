@@ -11,7 +11,7 @@ export const NavWrapper = styled.nav`
 export const Title = styled(NavLink)`
   text-decoration: none;
   color: #333;
-  font-size: 24px;
+  font-size: 16px;
   font-weight: 600;
 `
 
@@ -26,7 +26,7 @@ export const NavItem = styled(NavLink)`
 
   text-decoration: none;
   color: #666;
-  font-size: 24px;
+  font-size: 16px;
   font-weight: 500;
 
   transition: color 0.2s ease;

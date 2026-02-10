@@ -6,8 +6,8 @@ export const HeaderWrapper = styled.header<{ $hidden: boolean }>`
   left: 0;
   right: 0;
 
-  height: 40px;
-  padding: 32px 64px 24px;
+  height: 24px;
+  padding: 24px 64px 16px;
   background: #fff;
   z-index: 1000;
 
