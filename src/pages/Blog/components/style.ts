@@ -11,6 +11,12 @@ export const TabButton = styled.button<{ active: boolean }>`
   font-weight: ${props => props.active ? 600 : 400};
   opacity: ${props => props.active ? 1 : 0.5};
   cursor: pointer;
+  border-radius: 16px;
+  padding: 8px 16px;
+  &:hover {
+    opacity: 1;
+    background-color: #f0f0f0;
+  }
 `;
 
 export const PostListContainer = styled.div`
