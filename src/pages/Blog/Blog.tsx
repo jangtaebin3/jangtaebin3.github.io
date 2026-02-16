@@ -1,3 +1,4 @@
+import { BlogContainer } from './style';
 import BlogHeader from './BlogHeader';
 import { useState, useMemo } from 'react';
 import TabMenu from './components/TabMenu';
@@ -40,8 +41,10 @@ const Blog = () => {
   return (
     <div>
       <BlogHeader />
-      <TabMenu activeTab={activeTab} onChange={setActiveTab} />
-      <PostList posts={filteredPosts} />
+      <BlogContainer>
+        <TabMenu activeTab={activeTab} onChange={setActiveTab} />
+        <PostList posts={filteredPosts} />
+      </BlogContainer>
     </div>
   );
 }
