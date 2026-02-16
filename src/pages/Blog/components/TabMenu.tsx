@@ -1,3 +1,4 @@
+import { TabMenuContainer, TabButton } from './style';
 import type { BlogCategory } from '@/types/blog';
 
 interface TabMenuProps {
@@ -14,23 +15,17 @@ const tabs: { label: string; value: BlogCategory }[] = [
 
 const TabMenu = ({ activeTab, onChange }: TabMenuProps) => {
   return (
-    <div style={{ display: 'flex', gap: '24px' }}>
+    <TabMenuContainer>
       {tabs.map(tab => (
-        <button
+        <TabButton
           key={tab.value}
+          active={activeTab === tab.value}
           onClick={() => onChange(tab.value)}
-          style={{
-            border: 'none',
-            background: 'none',
-            fontWeight: activeTab === tab.value ? 600 : 400,
-            opacity: activeTab === tab.value ? 1 : 0.5,
-            cursor: 'pointer'
-          }}
         >
           {tab.label}
-        </button>
+        </TabButton>
       ))}
-    </div>
+    </TabMenuContainer>
   )
 }
 
