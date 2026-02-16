@@ -1,4 +1,5 @@
 import type { BlogPost } from '@/types/blog';
+import * as S from './style';
 
 interface PostListProps {
   posts: BlogPost[]
@@ -6,15 +7,15 @@ interface PostListProps {
 
 const PostList = ({ posts }: PostListProps) => {
   return (
-    <div>
+    <S.PostListContainer>
       {posts.map(post => (
-        <div key={post.id} style={{ marginBottom: '32px' }}>
-          <h3>{post.title}</h3>
-          <p>{post.description}</p>
-          <span>{post.date}</span>
-        </div>
+        <S.PostItem key={post.id}>
+          <S.PostTitle>{post.title}</S.PostTitle>
+          <S.PostDescription>{post.description}</S.PostDescription>
+          <S.PostDate>{post.date}</S.PostDate>
+        </S.PostItem>
       ))}
-    </div>
+    </S.PostListContainer>
   )
 }
 export default PostList;
