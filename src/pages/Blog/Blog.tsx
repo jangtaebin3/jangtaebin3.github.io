@@ -1,4 +1,3 @@
-import * as S from './style';
 import BlogHeader from './BlogHeader';
 import { useState, useMemo } from 'react';
 import TabMenu from './components/TabMenu';
