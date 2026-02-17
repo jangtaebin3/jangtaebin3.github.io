@@ -1,4 +1,4 @@
-import { TabMenuContainer, TabButton } from './style';
+import { TabMenuContainer, TabButton, ActiveIndicator } from './style';
 import type { BlogCategory } from '@/types/blog';
 
 interface TabMenuProps {
@@ -19,10 +19,13 @@ const TabMenu = ({ activeTab, onChange }: TabMenuProps) => {
       {tabs.map(tab => (
         <TabButton
           key={tab.value}
-          active={activeTab === tab.value}
           onClick={() => onChange(tab.value)}
+          $active={activeTab === tab.value}
         >
           {tab.label}
+          {activeTab === tab.value && (
+            <ActiveIndicator layoutId="tab-indicator" />
+          )}
         </TabButton>
       ))}
     </TabMenuContainer>
