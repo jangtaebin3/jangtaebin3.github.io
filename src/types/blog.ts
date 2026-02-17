@@ -5,6 +5,7 @@ export interface BlogPost {
   title: string
   description: string
   date: string
-  category: Exclude<BlogCategory, 'all'>
+  category: 'dev' | 'research' | 'book'
+  slug: string
   url?: string
 }
