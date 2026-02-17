@@ -5,6 +5,7 @@ import Home from '@/pages/Home'
 import Projects from '@/pages/Projects'
 import About from '@/pages/About'
 import Blog from '@/pages/Blog'
+import BlogDetail from '@/pages/Blog/BlogDetail'
 import NotFound from '@/pages/NotFound'
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="*" element={<NotFound /> } />
+          <Route path="/blog/:category/:slug" element={<BlogDetail />} />
         </Route>
       </Routes>
     </BrowserRouter>
