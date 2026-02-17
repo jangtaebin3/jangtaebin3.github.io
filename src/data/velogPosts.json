@@ -1,0 +1,38 @@
+[
+  {
+    "id": "d3962663-15fe-4b45-b353-06877db99713",
+    "title": "04_react 컴포넌트 분리하기",
+    "slug": "04react-컴포넌트-분리하기",
+    "date": "2025-02-14T16:37:30.438Z",
+    "description": "오늘 해볼 일은 바로...Overview 페이지 컴포넌트 분리 후 Recurring Bills 박스 구현하기...우선 구현할 페이지의 모양은 다음과 같다함께 작업하는 김XX 님께서 이미 작업해둔 내용은Budgets 박스를 미리 작업을 해두었다.하지만...보이는 것처럼 ",
+    "thumbnail": "https://velog.velcdn.com/images/taebin0416/post/d798afc6-3219-42c1-8a79-87dcbb820b57/image.png",
+    "category": "dev"
+  },
+  {
+    "id": "fd0caa6b-76fb-439b-904c-2dd8da8289c0",
+    "title": "03_react 미디어 쿼리 적용하기",
+    "slug": "03react-미디어-쿼리-적용하기",
+    "date": "2025-01-24T15:15:34.055Z",
+    "description": "오늘의 문제점은Transactions 페이지 개발 도중 미디어 쿼리를 적용하는 것에 있어서 어려움이 발생했었다.우선 Transactions 페이지를 만족스럽게 완성한 나는 미디어 쿼리 적용을 시도한다.우선이런 식으로 생긴 정보  표현 방식을이렇게 바꾸어야했다따라서 gp",
+    "thumbnail": "https://velog.velcdn.com/images/taebin0416/post/55ea2c27-0122-432d-9b0d-5763379d2b8e/image.png",
+    "category": "dev"
+  },
+  {
+    "id": "02b77806-f79d-4f94-8d1e-75b9a097b608",
+    "title": "02_react 점수판 조정하기",
+    "slug": "02react-점수판-조정하기",
+    "date": "2024-12-30T02:43:40.631Z",
+    "description": "오늘의 할 일은... 점수판을 조정하기!처음에는 기능 구현에 급급하다보니 세부적인 것을 놓치고 있었다.문제는 CPU 와의 대결에서 O 를 선택한 경우에 발생하였다.점수판의 점수가 반대로 올라가는 것이었다.처음에는 O 를 선택하고 이겼을 때, X 의 점수가 올라가는 것처",
+    "thumbnail": "https://velog.velcdn.com/images/taebin0416/post/2e093a68-5ae7-440d-bfa1-bb67a7604323/image.png",
+    "category": "dev"
+  },
+  {
+    "id": "91b46c34-6118-4c5d-84f2-fa4a5ec9f421",
+    "title": "01_react svg 이미지 파일 색 적용 오류",
+    "slug": "01react-svg-이미지-파일-색-적용-오류",
+    "date": "2024-12-29T16:48:44.579Z",
+    "description": "발생 오류는..틱텍토 게임 시작 페이지에서 X/O 를 선택할 때, 선택값에 따라 선택한 모양이 회색 처리(?)가 되어야 하지만그게 둘 다 이상했던 것..이 사진이 딱 정상적인 모습 (O를 선택한 모습)하지만 내가 처음 만든 모습은 플레이어가 X/O 선택이 명확하지 않았",
+    "thumbnail": "https://velog.velcdn.com/images/taebin0416/post/63292ee8-7f40-4a89-89f5-480d2e60a90d/image.png",
+    "category": "dev"
+  }
+]
