@@ -1,23 +1,35 @@
+import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
 export const TabMenuContainer = styled.div`
   display: flex;
-  gap: 24px;
+  gap: 32px;
 `;
 
-export const TabButton = styled.button<{ active: boolean }>`
-  border: none;
+export const TabButton = styled.button<{ $active: boolean }>`
+  position: relative;
   background: none;
-  font-weight: ${props => props.active ? 600 : 400};
-  opacity: ${props => props.active ? 1 : 0.5};
+  border: none;
+  padding: 8px 0;
+  font-size: 16px;
   cursor: pointer;
-  border-radius: 16px;
-  padding: 8px 16px;
+  color: ${({ $active }) => ($active ? '#000' : '#888')};
+  transition: color 0.3s ease;
+
   &:hover {
-    opacity: 1;
-    background-color: #f0f0f0;
+    color: #000;
   }
-`;
+`
+
+export const ActiveIndicator = styled(motion.div)`
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #000;
+  border-radius: 2px;
+`
 
 export const PostListContainer = styled.div`
   width: 100%;
