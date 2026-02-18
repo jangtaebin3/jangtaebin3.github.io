@@ -8,4 +8,6 @@ export interface BlogPost {
   category: 'dev' | 'research' | 'book'
   slug: string
   url?: string
+  thumbnail?: string | null
+  body?: string
 }
