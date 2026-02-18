@@ -1,0 +1,24 @@
+name: "✨ Feature"
+description: 새로운 기능 추가 요청
+title: "feat: "
+labels: ["feature"]
+body:
+  - type: textarea
+    attributes:
+      label: 📌 기능 설명
+      description: 어떤 기능인지 자세히 설명해주세요.
+      placeholder: velog 게시글 검색 기능 추가
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: 🎯 작업 목적
+      description: 왜 이 기능이 필요한가요?
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: 🧩 구현 아이디어
+      description: 구현 방식이 있다면 작성해주세요.
