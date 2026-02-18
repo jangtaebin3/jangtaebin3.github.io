@@ -145,7 +145,7 @@ const BlogDetail = () => {
       </S.Content>
 
       <S.Footer>
-        <button onClick={() => navigate(-1)}>← Back</button>
+        <S.ToList onClick={() => navigate('/blog')}>Back</S.ToList>
       </S.Footer>
     </S.Container>
   )
