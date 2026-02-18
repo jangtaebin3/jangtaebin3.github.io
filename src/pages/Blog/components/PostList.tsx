@@ -33,7 +33,7 @@ const formatPostDate = (value: string) => {
   const get = (type: Intl.DateTimeFormatPartTypes) =>
     parts.find(part => part.type === type)?.value ?? ''
 
-  return `${get('year')}.${get('month')}.${get('day')} ${get('hour')}:${get('minute')}`
+  return `${get('year')}.${get('month')}.${get('day')}`
 }
 
 const PostList = ({ post }: PostListProps) => {
@@ -45,14 +45,18 @@ const PostList = ({ post }: PostListProps) => {
 
   return (
     <S.PostListContainer>
-      {post.map(post => (
+    {post.length === 0 ? (
+      <S.EmptyMessage>아직 작성된 글이 없습니다.</S.EmptyMessage>
+    ) : (
+      post.map(post => (
         <S.PostItem key={post.id} onClick={() => handleClick(post)}>
           <S.PostTitle>{post.title}</S.PostTitle>
-          <S.PostDescription>{normalizeDescription(post.description)}...</S.PostDescription>
-          <S.PostDate>{formatPostDate(post.date)}</S.PostDate>
+          <S.PostDescription>{normalizeDescription(post.description)}</S.PostDescription>
+          <S.PostDate>{post.date}</S.PostDate>
         </S.PostItem>
-      ))}
-    </S.PostListContainer>
+      ))
+    )}
+  </S.PostListContainer>
   )
 }
 export default PostList;
