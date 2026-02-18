@@ -6,6 +6,8 @@ interface PostListProps {
   post: BlogPost[]
 }
 
+const normalizeDescription = (text: string) => text.replace(/\s*\n+\s*/g, ' ').trim()
+
 const PostList = ({ post }: PostListProps) => {
   const navigate = useNavigate()
 
@@ -18,7 +20,7 @@ const PostList = ({ post }: PostListProps) => {
       {post.map(post => (
         <S.PostItem key={post.id} onClick={() => handleClick(post)}>
           <S.PostTitle>{post.title}</S.PostTitle>
-          <S.PostDescription>{post.description}</S.PostDescription>
+          <S.PostDescription>{normalizeDescription(post.description)}</S.PostDescription>
           <S.PostDate>{post.date}</S.PostDate>
         </S.PostItem>
       ))}

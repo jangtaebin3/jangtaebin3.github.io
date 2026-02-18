@@ -59,7 +59,6 @@ export const PostDescription = styled.p`
   text-overflow: ellipsis;
 `;
 
-
 export const PostDate = styled.span`
   color: #888;
 `;
