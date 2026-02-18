@@ -2,8 +2,8 @@ import type { ReactNode } from 'react'
 import { useMemo, useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import * as S from './style'
-import velogPosts from '@/data/velogPosts.json'
-import type { BlogPost, BlogCategory } from '@/types/blog'
+import { blogPosts } from '@/data/blogPosts'
+import type { BlogCategory } from '@/types/blog'
 
 const imagePattern = /^!\[(.*?)\]\((https?:\/\/[^\s)]+)\)$/
 const headingPattern = /^(#{1,6})\s+(.*)$/
@@ -109,15 +109,14 @@ const renderMarkdownBody = (body: string, postId: string) => {
 const BlogDetail = () => {
   const { category, slug } = useParams()
   const navigate = useNavigate()
-  const posts = velogPosts as BlogPost[]
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
   }, [category, slug])
-  
+
   const post = useMemo(
-    () => posts.find(item => item.slug === slug && item.category === category),
-    [category, posts, slug]
+    () => blogPosts.find(item => item.slug === slug && item.category === category),
+    [category, slug]
   )
 
   if (!post) {
