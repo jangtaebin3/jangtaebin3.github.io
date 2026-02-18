@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
 export const BlogContainer = styled.div`
-  margin-top: 40px;
+  background: #F8FBF4;
   display: flex;
   flex-direction: column;  
-  padding: 0 20vw;
+  padding: 40px 20vw;
   gap: 32px;
 `;
 
