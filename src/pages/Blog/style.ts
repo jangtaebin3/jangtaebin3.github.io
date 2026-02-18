@@ -86,3 +86,18 @@ export const Content = styled.article`
 export const Footer = styled.div`
   margin-top: 48px;
 `
+
+export const ToList = styled.button`
+  background: #000;
+  border: none;
+  border-radius: 84px;
+  padding: 8px 16px;
+  color: #aaa;
+  font-size: 14px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #fff;
+  }
+`;
