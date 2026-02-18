@@ -8,6 +8,27 @@ interface PostListProps {
 
 const normalizeDescription = (text: string) => text.replace(/\s*\n+\s*/g, ' ').trim()
 
+const formatPostDate = (value: string) => {
+  const date = new Date(value)
+
+  if (Number.isNaN(date.getTime())) return value
+
+  const parts = new Intl.DateTimeFormat('ko-KR', {
+    timeZone: 'Asia/Seoul',
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: false
+  }).formatToParts(date)
+
+  const get = (type: Intl.DateTimeFormatPartTypes) =>
+    parts.find(part => part.type === type)?.value ?? ''
+
+  return `${get('year')}.${get('month')}.${get('day')} ${get('hour')}:${get('minute')}`
+}
+
 const PostList = ({ post }: PostListProps) => {
   const navigate = useNavigate()
 
@@ -21,7 +42,7 @@ const PostList = ({ post }: PostListProps) => {
         <S.PostItem key={post.id} onClick={() => handleClick(post)}>
           <S.PostTitle>{post.title}</S.PostTitle>
           <S.PostDescription>{normalizeDescription(post.description)}</S.PostDescription>
-          <S.PostDate>{post.date}</S.PostDate>
+          <S.PostDate>{formatPostDate(post.date)}</S.PostDate>
         </S.PostItem>
       ))}
     </S.PostListContainer>
