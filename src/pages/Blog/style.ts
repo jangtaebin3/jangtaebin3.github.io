@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const BlogContainer = styled.div`
-  background: #F8FBF4;
   display: flex;
   flex-direction: column;  
   padding: 40px 20vw;

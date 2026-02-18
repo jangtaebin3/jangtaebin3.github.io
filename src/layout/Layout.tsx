@@ -12,6 +12,7 @@ const LayoutWrapper = styled.div`
   flex-direction: column;
 `
 const Main = styled.main`
+  background: #F8FBF4;
   flex: 1;
   padding-top: ${HEADER_HEIGHT}px;
   min-height: calc(100vh - ${HEADER_HEIGHT}px);
