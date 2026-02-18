@@ -65,6 +65,47 @@ const renderMarkdownLine = (line: string, key: string) => {
   return <p key={key}>{renderInline(trimmedLine)}</p>
 }
 
+const renderMarkdownBody = (body: string, postId: string) => {
+  const lines = body.split('\n')
+  const nodes: ReactNode[] = []
+  const codeLines: string[] = []
+
+  let inCodeBlock = false
+
+  lines.forEach((line, index) => {
+    if (line.trim().startsWith('```')) {
+      if (inCodeBlock) {
+        nodes.push(
+          <pre key={`${postId}-code-${index}`}>
+            <code>{codeLines.join('\n')}</code>
+          </pre>
+        )
+        codeLines.length = 0
+      }
+
+      inCodeBlock = !inCodeBlock
+      return
+    }
+
+    if (inCodeBlock) {
+      codeLines.push(line)
+      return
+    }
+
+    nodes.push(renderMarkdownLine(line, `${postId}-${index}`))
+  })
+
+  if (codeLines.length) {
+    nodes.push(
+      <pre key={`${postId}-code-fallback`}>
+        <code>{codeLines.join('\n')}</code>
+      </pre>
+    )
+  }
+
+  return nodes
+}
+
 const BlogDetail = () => {
   const { category, slug } = useParams()
   const navigate = useNavigate()
@@ -100,9 +141,7 @@ const BlogDetail = () => {
       <S.Divider />
 
       <S.Content>
-        {post.body
-          ? post.body.split('\n').map((line, index) => renderMarkdownLine(line, `${post.id}-${index}`))
-          : <p>{post.description}</p>}
+          {post.body ? renderMarkdownBody(post.body, post.id) : <p>{post.description}</p>}
       </S.Content>
 
       <S.Footer>
