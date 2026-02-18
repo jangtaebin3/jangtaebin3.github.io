@@ -52,7 +52,7 @@ const PostList = ({ post }: PostListProps) => {
         <S.PostItem key={post.id} onClick={() => handleClick(post)}>
           <S.PostTitle>{post.title}</S.PostTitle>
           <S.PostDescription>{normalizeDescription(post.description)}</S.PostDescription>
-          <S.PostDate>{post.date}</S.PostDate>
+          <S.PostDate>{formatPostDate(post.date)}</S.PostDate>
         </S.PostItem>
       ))
     )}
