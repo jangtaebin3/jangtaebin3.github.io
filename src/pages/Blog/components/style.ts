@@ -62,3 +62,10 @@ export const PostDescription = styled.p`
 export const PostDate = styled.span`
   color: #888;
 `;
+
+export const EmptyMessage = styled.p`
+  margin: 0;
+  padding: 24px 0;
+  color: #888;
+  font-size: 15px;
+`;
