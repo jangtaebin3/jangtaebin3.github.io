@@ -52,7 +52,13 @@ export const PostTitle = styled.h3`
 
 export const PostDescription = styled.p`
   margin: 0;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `;
+
 
 export const PostDate = styled.span`
   color: #888;
