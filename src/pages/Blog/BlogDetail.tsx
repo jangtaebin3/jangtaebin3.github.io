@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react'
-import { useMemo } from 'react'
+import { useMemo, useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import * as S from './style'
 import velogPosts from '@/data/velogPosts.json'
@@ -111,6 +111,10 @@ const BlogDetail = () => {
   const navigate = useNavigate()
   const posts = velogPosts as BlogPost[]
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
+  }, [category, slug])
+  
   const post = useMemo(
     () => posts.find(item => item.slug === slug && item.category === category),
     [category, posts, slug]
