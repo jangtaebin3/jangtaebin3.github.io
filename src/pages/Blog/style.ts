@@ -66,6 +66,22 @@ export const Content = styled.article`
   strong {
     font-weight: 700;
   }
+
+  pre {
+    margin: 20px 0;
+    padding: 16px;
+    border-radius: 12px;
+    background: #111827;
+    overflow-x: auto;
+  }
+
+  code {
+    font-family: 'Fira Code', 'JetBrains Mono', Menlo, Monaco, Consolas, 'Courier New', monospace;
+    color: #e5e7eb;
+    font-size: 14px;
+    line-height: 1.6;
+    white-space: pre;
+  }
 `
 
 export const Footer = styled.div`
