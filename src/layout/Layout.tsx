@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
-export const HEADER_HEIGHT = 64
+export const HEADER_HEIGHT = 72
 
 const LayoutWrapper = styled.div`
   min-height: 100vh;
@@ -12,6 +12,7 @@ const LayoutWrapper = styled.div`
   flex-direction: column;
 `
 const Main = styled.main`
+  background: #F8FBF4;
   flex: 1;
   padding-top: ${HEADER_HEIGHT}px;
   min-height: calc(100vh - ${HEADER_HEIGHT}px);
