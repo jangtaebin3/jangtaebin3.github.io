@@ -3,18 +3,21 @@ import BlogHeader from './BlogHeader'
 import { useMemo, useState } from 'react'
 import TabMenu from './components/TabMenu'
 import PostList from './components/PostList'
-import velogPosts from '@/data/velogPosts.json'
-import type { BlogCategory, BlogPost } from '@/types/blog'
+import { blogPosts } from '@/data/blogPosts'
+import type { BlogCategory } from '@/types/blog'
 
 const Blog = () => {
   const [activeTab, setActiveTab] = useState<BlogCategory>('all')
-  const posts = velogPosts as BlogPost[]
 
   const filteredPosts = useMemo(() => {
-    if (activeTab === 'all') return posts
+  const targetPosts = activeTab === 'all'
+    ? blogPosts
+    : blogPosts.filter(post => post.category === activeTab)
 
-    return posts.filter(post => post.category === activeTab)
-  }, [activeTab, posts])
+  return [...targetPosts].sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+  )
+}, [activeTab, blogPosts])
 
   return (
     <div>
