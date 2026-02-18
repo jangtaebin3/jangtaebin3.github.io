@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
-export const HEADER_HEIGHT = 64
+export const HEADER_HEIGHT = 72
 
 const LayoutWrapper = styled.div`
   min-height: 100vh;
