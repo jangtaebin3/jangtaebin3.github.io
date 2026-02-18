@@ -50,6 +50,22 @@ export const Content = styled.article`
   p {
     margin-bottom: 16px;
   }
+
+  h1, h2, h3, h4, h5, h6 {
+    margin: 24px 0 12px;
+    line-height: 1.4;
+  }
+
+  img {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 12px;
+    margin: 12px 0 20px;
+  }
+
+  strong {
+    font-weight: 700;
+  }
 `
 
 export const Footer = styled.div`
