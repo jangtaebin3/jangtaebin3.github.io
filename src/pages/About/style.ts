@@ -149,6 +149,6 @@ export const SkillDetail = styled.span`
 
 export const ValueContent = styled.span`
   font-size: 24px;
-  font-weight: 500;
+  font-weight: 400;
   color: #F8FAFC;
 `;
