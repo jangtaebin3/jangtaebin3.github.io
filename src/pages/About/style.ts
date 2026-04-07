@@ -7,7 +7,7 @@ export const AboutContainer = styled.div`
 export const IntroHeroContainer = styled.div`
   padding: 64px 120px 0;
   height: calc(100vh - 64px);
-  background: linear-gradient(180deg, #fff 0%, #002244ff 80%, #0D1117 100%);
+  background: linear-gradient(180deg, #000 0%, #002244ff 80%, #0D1117 100%);
 `;
 
 export const AboutContentContainer = styled.div`
@@ -27,8 +27,8 @@ export const AboutTitle = styled.p`
 
   background: linear-gradient(
     to bottom,
-    rgba(15, 23, 42, 0.35),
-    rgba(15, 23, 42, 0.05)
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.0)
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
