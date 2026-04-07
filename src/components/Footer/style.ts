@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const FooterWrapper = styled.footer`
-  background-color: #f8f8f8;
+  background-color: #010409;
   padding: 32px 0;
   text-align: center;
 `
@@ -19,17 +19,17 @@ export const IconButton = styled.button`
   padding: 0;
   cursor: pointer;
 
-  color: #555;
+  color: #8B949E;
   transition: color 0.2s ease, transform 0.2s ease;
 
   &:hover {
-    color: #000;
+    color: #E6EDF3;
     transform: translateY(-2px);
   }
 `
 
 export const Copyright = styled.small`
-  color: #555;
+  color: #8B949E;
   font-size: 15px;
   font-weight: 400;
 `

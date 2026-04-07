@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
-import { Outlet } from 'react-router-dom'
+import { Outlet, useLocation } from 'react-router-dom'
 import styled from 'styled-components'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
@@ -11,11 +11,11 @@ const LayoutWrapper = styled.div`
   display: flex;
   flex-direction: column;
 `
-const Main = styled.main`
-  background: #F8FBF4;
+const Main = styled.main<{ $isHome: boolean }>`
+  background: ${({ $isHome }) => ($isHome ? 'transparent' : '#0D1117')};
   flex: 1;
-  padding-top: ${HEADER_HEIGHT}px;
-  min-height: calc(100vh - ${HEADER_HEIGHT}px);
+  padding-top: 0;
+  min-height: 100vh;
 `
 
 const Layout = () => {
@@ -23,6 +23,13 @@ const Layout = () => {
     const saved = localStorage.getItem('header-hidden')
     return saved === 'true'
   })
+
+  const location = useLocation()
+  const isHome = location.pathname === '/'
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [location.pathname])
 
   const lastScrollY = useRef(0)
   const hasScrolled = useRef(false)
@@ -57,7 +64,7 @@ const Layout = () => {
   return (
     <LayoutWrapper>
       <Header isHidden={isHidden} />
-      <Main>
+      <Main $isHome={isHome}>
         <Outlet />
       </Main>
       <Footer />

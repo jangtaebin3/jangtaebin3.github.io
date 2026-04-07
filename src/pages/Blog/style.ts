@@ -5,6 +5,7 @@ export const BlogContainer = styled.div`
   flex-direction: column;  
   padding: 40px 20vw;
   gap: 32px;
+  background: #0D1117;
 `;
 
 export const Container = styled.div`
@@ -20,7 +21,7 @@ export const Header = styled.header`
 export const Category = styled.span`
   font-size: 12px;
   letter-spacing: 1px;
-  color: #888;
+  color: #8B949E;
 `
 
 export const Title = styled.h1`
@@ -28,12 +29,13 @@ export const Title = styled.h1`
   font-size: 36px;
   font-weight: 600;
   line-height: 1.3;
+  color: #E6EDF3;
 `
 
 export const Meta = styled.p`
   margin-top: 12px;
   font-size: 14px;
-  color: #aaa;
+  color: #8B949E;
 `
 
 export const Divider = styled.hr`
@@ -45,6 +47,7 @@ export const Divider = styled.hr`
 export const Content = styled.article`
   line-height: 1.8;
   font-size: 16px;
+  color: #E6EDF3;
 
   p {
     margin-bottom: 16px;
@@ -88,16 +91,19 @@ export const Footer = styled.div`
 `
 
 export const ToList = styled.button`
-  background: #000;
-  border: none;
+  background: #21262D;
+  border: 1px solid rgba(240, 246, 252, 0.1);
   border-radius: 84px;
-  padding: 8px 16px;
-  color: #aaa;
+  padding: 8px 20px;
+  color: #C9D1D9;
   font-size: 14px;
+  font-weight: 500;
   cursor: pointer;
-  transition: color 0.3s ease;
+  transition: all 0.2s ease;
 
   &:hover {
-    color: #fff;
+    background: #30363D;
+    border-color: #8B949E;
+    color: #E6EDF3;
   }
 `;
