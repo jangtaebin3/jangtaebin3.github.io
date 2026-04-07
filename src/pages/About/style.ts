@@ -7,7 +7,7 @@ export const AboutContainer = styled.div`
 export const IntroHeroContainer = styled.div`
   padding: 64px 120px 0;
   height: calc(100vh - 128px);
-  background: linear-gradient(180deg, #fff 0%, #aaa 75%, #555 100%);
+  background: linear-gradient(180deg, #F8FBF4 0%, #aaa 75%, #555 100%);
 `;
 
 export const AboutContentContainer = styled.div`
