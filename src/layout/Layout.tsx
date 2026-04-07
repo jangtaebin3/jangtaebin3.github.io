@@ -12,7 +12,7 @@ const LayoutWrapper = styled.div`
   flex-direction: column;
 `
 const Main = styled.main<{ $isHome: boolean }>`
-  background: ${({ $isHome }) => ($isHome ? 'transparent' : '#F8FBF4')};
+  background: ${({ $isHome }) => ($isHome ? 'transparent' : '#0D1117')};
   flex: 1;
   padding-top: 0;
   min-height: 100vh;
