@@ -13,6 +13,7 @@ export const Title = styled(NavLink)<{ $isHome?: boolean }>`
   color: ${({ $isHome }) => ($isHome ? '#fff' : '#333')};
   font-size: 16px;
   font-weight: 600;
+  transition: color 0.5s ease;
 `
 
 export const NavItems = styled.div`
@@ -29,7 +30,7 @@ export const NavItem = styled(NavLink)<{ $isHome?: boolean }>`
   font-size: 16px;
   font-weight: 500;
 
-  transition: color 0.2s ease;
+  transition: color 0.5s ease;
 
   &::after {
     content: '';
@@ -43,7 +44,7 @@ export const NavItem = styled(NavLink)<{ $isHome?: boolean }>`
 
     transform: scaleX(0);
     transform-origin: left;
-    transition: transform 0.25s ease;
+    transition: transform 0.25s ease, background-color 0.5s ease;
   }
 
   &:hover {
