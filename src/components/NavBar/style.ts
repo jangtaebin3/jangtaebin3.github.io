@@ -9,6 +9,7 @@ export const NavWrapper = styled.nav`
 `
 
 export const Title = styled(NavLink) <{ $isAbout?: boolean }>`
+  font-family: 'IBM Plex Mono', monospace, sans-serif;
   text-decoration: none;
   color: ${({ $isAbout }) => ($isAbout ? '#333' : '#fff')};
   font-size: 16px;
@@ -22,6 +23,7 @@ export const NavItems = styled.div`
 `
 
 export const NavItem = styled(NavLink) <{ $isAbout?: boolean }>`
+  font-family: 'IBM Plex Mono', monospace, sans-serif;
   position: relative;
   padding: 4px 0;
 
