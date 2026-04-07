@@ -37,12 +37,13 @@ export const PostListContainer = styled.div`
   flex-direction: column;
   gap: 16px;
   color: #E6EDF3;
+  margin-bottom: 48px;
 `;
 
 export const PostItem = styled.div`
   display: flex;
   flex-direction: column;
-  padding-bottom: 12px;
+  padding-bottom: 16px;
   border-bottom: 1px solid #ddd;
   gap: 8px;
 `;
