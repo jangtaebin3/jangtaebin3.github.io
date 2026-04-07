@@ -13,11 +13,11 @@ export const TabButton = styled.button<{ $active: boolean }>`
   padding: 8px 0;
   font-size: 16px;
   cursor: pointer;
-  color: ${({ $active }) => ($active ? '#000' : '#888')};
+  color: ${({ $active }) => ($active ? '#fff' : '#888')};
   transition: color 0.3s ease;
 
   &:hover {
-    color: #000;
+    color: #fff;
   }
 `
 
@@ -27,7 +27,7 @@ export const ActiveIndicator = styled(motion.div)`
   left: 0;
   right: 0;
   height: 2px;
-  background: #000;
+  background: #E6EDF3;
   border-radius: 2px;
 `
 
@@ -36,6 +36,7 @@ export const PostListContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 16px;
+  color: #E6EDF3;
 `;
 
 export const PostItem = styled.div`

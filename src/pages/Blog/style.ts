@@ -5,6 +5,7 @@ export const BlogContainer = styled.div`
   flex-direction: column;  
   padding: 40px 20vw;
   gap: 32px;
+  background: #0D1117;
 `;
 
 export const Container = styled.div`
