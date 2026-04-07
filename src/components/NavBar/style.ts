@@ -8,9 +8,9 @@ export const NavWrapper = styled.nav`
   justify-content: space-between;
 `
 
-export const Title = styled(NavLink)`
+export const Title = styled(NavLink)<{ $isHome?: boolean }>`
   text-decoration: none;
-  color: #333;
+  color: ${({ $isHome }) => ($isHome ? '#fff' : '#333')};
   font-size: 16px;
   font-weight: 600;
 `
@@ -20,12 +20,12 @@ export const NavItems = styled.div`
   gap: 32px;
 `
 
-export const NavItem = styled(NavLink)`
+export const NavItem = styled(NavLink)<{ $isHome?: boolean }>`
   position: relative;
   padding: 4px 0;
 
   text-decoration: none;
-  color: #666;
+  color: ${({ $isHome }) => ($isHome ? 'rgba(255, 255, 255, 0.7)' : '#666')};
   font-size: 16px;
   font-weight: 500;
 
@@ -39,7 +39,7 @@ export const NavItem = styled(NavLink)`
 
     width: 100%;
     height: 2px;
-    background-color: #000;
+    background-color: ${({ $isHome }) => ($isHome ? '#fff' : '#000')};
 
     transform: scaleX(0);
     transform-origin: left;
@@ -47,7 +47,7 @@ export const NavItem = styled(NavLink)`
   }
 
   &:hover {
-    color: #000;
+    color: ${({ $isHome }) => ($isHome ? '#fff' : '#000')};
   }
 
   &:hover::after {
@@ -55,7 +55,7 @@ export const NavItem = styled(NavLink)`
   }
 
   &.active {
-    color: #000;
+    color: ${({ $isHome }) => ($isHome ? '#fff' : '#000')};
     font-weight: 700;
   }
 
