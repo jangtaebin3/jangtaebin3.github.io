@@ -1,10 +1,7 @@
 import { useState } from 'react'
 import { NavWrapper, Title, NavItems, NavItem, TitleChar } from './style'
-import { useLocation } from 'react-router-dom'
 
 const NavBar = () => {
-  const location = useLocation()
-  const isAbout = location.pathname === '/about'
   const titleText = "Jang Taebin"
 
   const [originIndex, setOriginIndex] = useState<number | null>(null)
@@ -26,7 +23,6 @@ const NavBar = () => {
     <NavWrapper>
       <Title
         to="/"
-        $isAbout={isAbout}
         onMouseLeave={handleMouseLeave}
       >
         {titleText.split('').map((char, index) => {
@@ -45,10 +41,10 @@ const NavBar = () => {
         })}
       </Title>
       <NavItems>
-        <NavItem to="/" end $isAbout={isAbout}>Home</NavItem>
-        <NavItem to="/about" $isAbout={isAbout}>About</NavItem>
-        <NavItem to="/projects" $isAbout={isAbout}>Projects</NavItem>
-        <NavItem to="/blog" $isAbout={isAbout}>Blog</NavItem>
+        <NavItem to="/" end>Home</NavItem>
+        <NavItem to="/about">About</NavItem>
+        <NavItem to="/projects">Projects</NavItem>
+        <NavItem to="/blog">Blog</NavItem>
       </NavItems>
     </NavWrapper>
   )
