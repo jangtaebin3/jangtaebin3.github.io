@@ -8,9 +8,9 @@ export const NavWrapper = styled.nav`
   justify-content: space-between;
 `
 
-export const Title = styled(NavLink) <{ $isWhiteBg?: boolean }>`
+export const Title = styled(NavLink) <{ $isAbout?: boolean }>`
   text-decoration: none;
-  color: ${({ $isWhiteBg }) => ($isWhiteBg ? '#fff' : '#333')};
+  color: ${({ $isAbout }) => ($isAbout ? '#333' : '#fff')};
   font-size: 16px;
   font-weight: 600;
   transition: color 0.5s ease;
@@ -21,12 +21,12 @@ export const NavItems = styled.div`
   gap: 32px;
 `
 
-export const NavItem = styled(NavLink) <{ $isWhiteBg?: boolean }>`
+export const NavItem = styled(NavLink) <{ $isAbout?: boolean }>`
   position: relative;
   padding: 4px 0;
 
   text-decoration: none;
-  color: ${({ $isWhiteBg }) => ($isWhiteBg ? 'rgba(255, 255, 255, 0.7)' : '#666')};
+  color: ${({ $isAbout }) => ($isAbout ? '#666' : 'rgba(255, 255, 255, 0.7)')};
   font-size: 16px;
   font-weight: 500;
 
@@ -40,7 +40,7 @@ export const NavItem = styled(NavLink) <{ $isWhiteBg?: boolean }>`
 
     width: 100%;
     height: 2px;
-    background-color: ${({ $isWhiteBg }) => ($isWhiteBg ? '#fff' : '#000')};
+    background-color: ${({ $isAbout }) => ($isAbout ? '#000' : '#fff')};
 
     transform: scaleX(0);
     transform-origin: left;
@@ -48,7 +48,7 @@ export const NavItem = styled(NavLink) <{ $isWhiteBg?: boolean }>`
   }
 
   &:hover {
-    color: ${({ $isWhiteBg }) => ($isWhiteBg ? '#fff' : '#000')};
+    color: ${({ $isAbout }) => ($isAbout ? '#000' : '#fff')};
   }
 
   &:hover::after {
@@ -56,7 +56,7 @@ export const NavItem = styled(NavLink) <{ $isWhiteBg?: boolean }>`
   }
 
   &.active {
-    color: ${({ $isWhiteBg }) => ($isWhiteBg ? '#fff' : '#000')};
+    color: ${({ $isAbout }) => ($isAbout ? '#000' : '#fff')};
     font-weight: 700;
   }
 
