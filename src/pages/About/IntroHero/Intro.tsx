@@ -14,7 +14,7 @@ const Intro = () => {
       whileInView="visible"
       viewport={{ once: true }}
     >
-      <MotionTitle variants={item} style={{ marginTop: 250 }}>
+      <MotionTitle variants={item} style={{ marginTop: '45vh' }}>
         안녕하세요, 개발자 장태빈입니다.
       </MotionTitle>
 
