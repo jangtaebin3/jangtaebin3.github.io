@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import { NavLink } from 'react-router-dom'
 
 export const NavWrapper = styled.nav`
@@ -15,6 +15,22 @@ export const Title = styled(NavLink) <{ $isAbout?: boolean }>`
   font-size: 16px;
   font-weight: 600;
   transition: color 0.5s ease;
+  display: flex;
+`
+
+const waveAnimation = keyframes`
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+`
+
+export const TitleChar = styled.span<{ $delay: number; $isAnimating: boolean }>`
+  display: inline-block;
+  animation: ${({ $isAnimating }) => ($isAnimating ? waveAnimation : 'none')} 0.3s ease-in-out;
+  animation-delay: ${({ $delay }) => $delay}s;
 `
 
 export const NavItems = styled.div`
