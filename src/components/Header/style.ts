@@ -8,7 +8,7 @@ export const HeaderWrapper = styled.header<{ $hidden: boolean }>`
 
   height: 24px;
   padding: 24px 64px 24px;
-  background: #fff;
+  backdrop-filter: blur(20px);
   z-index: 1000;
 
   display: flex;
