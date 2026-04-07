@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
 export const AboutContainer = styled.div`
-  background-color: #F8FBF4;
+  background-color: #0D1117;
 `;
 
 export const IntroHeroContainer = styled.div`
   padding: 64px 120px 0;
   height: calc(100vh - 64px);
-  background: linear-gradient(180deg, #fff 0%, #aaa 75%, #555 100%);
+  background: linear-gradient(180deg, #fff 0%, #002244ff 80%, #0D1117 100%);
 `;
 
 export const AboutContentContainer = styled.div`
@@ -27,8 +27,8 @@ export const AboutTitle = styled.p`
 
   background: linear-gradient(
     to bottom,
-    rgba(0,0,0,0.35),
-    rgba(0,0,0,0.05)
+    rgba(15, 23, 42, 0.35),
+    rgba(15, 23, 42, 0.05)
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -44,7 +44,7 @@ export const Section = styled.div`
 `;
 
 export const SectionTitle = styled.p`
-  color: #000;
+  color: #E6EDF3;
   font-size: 48px;
   font-style: normal;
   font-weight: 700;
@@ -52,7 +52,7 @@ export const SectionTitle = styled.p`
 `;
 
 export const IntroDetail = styled.p`
-  color: #3a3a3a;
+  color: rgba(255, 255, 255, 0.65);
   font-size: 36px;
   font-style: normal;
   font-weight: 500;
@@ -76,16 +76,17 @@ export const ExperienceItem = styled.li`
 
 export const ExperiencePeriod = styled.span`
   font-weight: 700;
+  color: #8B949E;
 `;
 
 export const ExperienceTitle = styled.span`
   font-weight: 500;
-  color: #333;
+  color: #E6EDF3;
 `;
 
 export const ExperienceDetail = styled.span`
   font-weight: 500;
-  color: #70716E;
+  color: #6E7681;
 `;
 
 export const EduList = styled.ul`
@@ -107,11 +108,12 @@ export const EduItem = styled.li`
 
 export const EduPeriod = styled.span`
   font-weight: 700;
+  color: #8B949E;
 `;
 
 export const EduTitle = styled.span`
   font-weight: 600;
-  color: #333;
+  color: #E6EDF3;
   margin-bottom: 24px;
 `;
 
@@ -137,15 +139,16 @@ export const SkillsItem = styled.li`
 export const SkillName = styled.span`
   font-size: 20px;
   font-weight: 700;
+  color: #E6EDF3;
 `;
 
 export const SkillDetail = styled.span`
   font-weight: 400;
-  color: #333;
+  color: rgba(255, 255, 255, 0.7);
 `;
 
 export const ValueContent = styled.span`
   font-size: 24px;
   font-weight: 500;
-  color: #222;
+  color: #F8FAFC;
 `;
