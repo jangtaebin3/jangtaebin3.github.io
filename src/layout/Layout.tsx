@@ -14,9 +14,8 @@ const LayoutWrapper = styled.div`
 const Main = styled.main<{ $isHome: boolean }>`
   background: ${({ $isHome }) => ($isHome ? 'transparent' : '#F8FBF4')};
   flex: 1;
-  padding-top: ${({ $isHome }) => ($isHome ? 0 : HEADER_HEIGHT)}px;
-  min-height: ${({ $isHome }) =>
-    $isHome ? '100vh' : `calc(100vh - ${HEADER_HEIGHT}px)`};
+  padding-top: 0;
+  min-height: 100vh;
 `
 
 const Layout = () => {
@@ -27,6 +26,10 @@ const Layout = () => {
 
   const location = useLocation()
   const isHome = location.pathname === '/'
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [location.pathname])
 
   const lastScrollY = useRef(0)
   const hasScrolled = useRef(false)
