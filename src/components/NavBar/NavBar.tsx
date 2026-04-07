@@ -4,15 +4,17 @@ import { useLocation } from 'react-router-dom'
 const NavBar = () => {
   const location = useLocation()
   const isHome = location.pathname === '/'
+  const isBlog = location.pathname === '/blog'
+  const isWhiteBg = isHome || isBlog
 
   return (
     <NavWrapper>
-      <Title to="/" $isHome={isHome}>Jang Taebin</Title>
+      <Title to="/" $isWhiteBg={isWhiteBg}>Jang Taebin</Title>
       <NavItems>
-        <NavItem to="/" end $isHome={isHome}>Home</NavItem>
-        <NavItem to="/about" $isHome={isHome}>About</NavItem>
-        <NavItem to="/projects" $isHome={isHome}>Projects</NavItem>
-        <NavItem to="/blog" $isHome={isHome}>Blog</NavItem>
+        <NavItem to="/" end $isWhiteBg={isWhiteBg}>Home</NavItem>
+        <NavItem to="/about" $isWhiteBg={isWhiteBg}>About</NavItem>
+        <NavItem to="/projects" $isWhiteBg={isWhiteBg}>Projects</NavItem>
+        <NavItem to="/blog" $isWhiteBg={isWhiteBg}>Blog</NavItem>
       </NavItems>
     </NavWrapper>
   )
