@@ -8,10 +8,10 @@ export const NavWrapper = styled.nav`
   justify-content: space-between;
 `
 
-export const Title = styled(NavLink) <{ $isAbout?: boolean }>`
+export const Title = styled(NavLink)`
   font-family: 'IBM Plex Mono', monospace, sans-serif;
   text-decoration: none;
-  color: ${({ $isAbout }) => ($isAbout ? '#333' : '#fff')};
+  color: #fff;
   font-size: 16px;
   font-weight: 600;
   transition: color 0.5s ease;
@@ -38,13 +38,13 @@ export const NavItems = styled.div`
   gap: 32px;
 `
 
-export const NavItem = styled(NavLink) <{ $isAbout?: boolean }>`
+export const NavItem = styled(NavLink)`
   font-family: 'IBM Plex Mono', monospace, sans-serif;
   position: relative;
   padding: 4px 0;
 
   text-decoration: none;
-  color: ${({ $isAbout }) => ($isAbout ? '#666' : 'rgba(255, 255, 255, 0.7)')};
+  color: rgba(255, 255, 255, 0.7);
   font-size: 16px;
   font-weight: 500;
 
@@ -58,7 +58,7 @@ export const NavItem = styled(NavLink) <{ $isAbout?: boolean }>`
 
     width: 100%;
     height: 2px;
-    background-color: ${({ $isAbout }) => ($isAbout ? '#000' : '#fff')};
+    background-color: #fff;
 
     transform: scaleX(0);
     transform-origin: left;
@@ -66,7 +66,7 @@ export const NavItem = styled(NavLink) <{ $isAbout?: boolean }>`
   }
 
   &:hover {
-    color: ${({ $isAbout }) => ($isAbout ? '#000' : '#fff')};
+    color: #fff;
   }
 
   &:hover::after {
@@ -74,7 +74,7 @@ export const NavItem = styled(NavLink) <{ $isAbout?: boolean }>`
   }
 
   &.active {
-    color: ${({ $isAbout }) => ($isAbout ? '#000' : '#fff')};
+    color: #fff;
     font-weight: 700;
   }
 
